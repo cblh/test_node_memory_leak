@@ -1,0 +1,30 @@
+{
+    "name": "AlloyDist",
+    "version": "0.0.1",
+    "description": "Alloy Distribute System for Web Project @ Tencent AlloyTeam",
+    "keywords": [
+        "Node.js",
+        "mongodb",
+        "Express"
+    ],
+    "main": "app.js",
+    "private": true,
+    "engines": {
+        "node": ">=0.8.10"
+    },
+    "scripts": {
+        "start": "pm2  startOrRestart pm2.json",
+        "setConfig": "pm2 set pm2-logrotate:interval_unit 'dd' && pm2 set pm2-logrotate:retain 2",
+        "dev": "set NODE_ENV=development&& node-dev --harmony --debug=5859 app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": {
+        "url": ""
+    },
+    "dependencies": {
+        "mongoose": "4.0.8"
+    }
+}
